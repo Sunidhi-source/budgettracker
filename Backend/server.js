@@ -12,16 +12,20 @@ const app = express();
 
 app.use(express.json());
 
+app.use(express.json());
+
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
       "https://budgettracker-7127.vercel.app"
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.options("*", cors());
 
 connectDB();
 
@@ -40,11 +44,9 @@ app.use("/api/v1/dashboard", dashboardRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 
-if (process.env.NODE_ENV !== "production") {
     const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
     });
-}
 
-module.exports = app; 
+    module.exports = app; 
