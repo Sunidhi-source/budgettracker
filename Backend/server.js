@@ -25,8 +25,6 @@ app.use(
   })
 );
 
-app.options("*", cors());
-
 connectDB();
 
 app.get("/", (req, res) => {
