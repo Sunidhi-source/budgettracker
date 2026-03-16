@@ -10,13 +10,7 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "Budget Tracker API is running!",
-    status: "Healthy"
-  });
-});
-
+app.use(express.json());
 app.use(
   cors({
     origin: process.env.CLIENT_URL || "*",
@@ -25,20 +19,28 @@ app.use(
   })
 );
 
-app.use(express.json());
-
 connectDB();
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Budget Tracker API is running!",
+    status: "Healthy"
+  });
+});
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income", incomeRoutes);
 app.use("/api/v1/expense", expenseRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
 
-// Serve uploads folder
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+module.exports = app; 
