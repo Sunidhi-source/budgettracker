@@ -10,7 +10,13 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
 
-// Middleware to handle CORS
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Budget Tracker API is running!",
+    status: "Healthy"
+  });
+});
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL || "*",
