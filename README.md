@@ -8,6 +8,44 @@ A full-stack expense and income tracking application built with the MERN stack. 
 
 ---
 
+## 📊 Screenshots
+
+### Dashboard
+![Dashboard View](./screenshots/dashboard.png)
+
+### Sign Up
+![Sign Up Page](./screenshots/signup.png)
+
+---
+
+## 🛠 Technology Stack
+
+### Frontend
+- **Framework**: React 19
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS 4
+- **Charts**: Recharts
+- **HTTP Client**: Axios
+- **Routing**: React Router DOM 7
+- **UI Features**: 
+  - Emoji Picker
+  - React Hot Toast (Notifications)
+  - React Icons
+- **Linting**: ESLint
+
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express.js 5
+- **Database**: MongoDB with Mongoose
+- **Authentication**: JWT (jsonwebtoken)
+- **Password Security**: bcryptjs
+- **File Upload**: Multer
+- **Data Export**: XLSX
+- **Environment**: dotenv
+- **Development**: Nodemon
+
+
+---
 ## ✨ Features
 
 - **User Authentication**
@@ -43,45 +81,6 @@ A full-stack expense and income tracking application built with the MERN stack. 
   - Profile photo uploads
   - Excel export capabilities for financial reports
   - Secure file handling with multer
-
----
-
-## 📊 Screenshots
-
-### Dashboard
-![Dashboard View](screenshots/dashboard.png)
-
-### Sign Up
-![Sign Up Page](screenshots/signup.png)
-
----
-
-## 🛠 Technology Stack
-
-### Frontend
-- **Framework**: React 19
-- **Build Tool**: Vite
-- **Styling**: TailwindCSS 4
-- **Charts**: Recharts
-- **HTTP Client**: Axios
-- **Routing**: React Router DOM 7
-- **UI Features**: 
-  - Emoji Picker
-  - React Hot Toast (Notifications)
-  - React Icons
-- **Linting**: ESLint
-
-### Backend
-- **Runtime**: Node.js
-- **Framework**: Express.js 5
-- **Database**: MongoDB with Mongoose
-- **Authentication**: JWT (jsonwebtoken)
-- **Password Security**: bcryptjs
-- **File Upload**: Multer
-- **Data Export**: XLSX
-- **Environment**: dotenv
-- **Development**: Nodemon
-
 
 ---
 
