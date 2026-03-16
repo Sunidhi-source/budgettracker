@@ -10,12 +10,9 @@ A full-stack expense and income tracking application built with the MERN stack. 
 
 ## 📊 Screenshots
 
-### Dashboard
-![Dashboard View](./screenshots/dashboard.png)
-
-### Sign Up
-![Sign Up Page](./screenshots/signup.png)
-
+| Dashboard | Sign Up |
+| :---: | :---: |
+| <img src="./screenshots/dashboard.png" width="400"> | <img src="./screenshots/signup.png" width="400"> |
 ---
 
 ## 🛠 Technology Stack
