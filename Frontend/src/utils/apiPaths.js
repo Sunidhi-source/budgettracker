@@ -1,4 +1,4 @@
-export const BASE_URL = "https://budgettracker-bice.vercel.app/";
+export const BASE_URL = "https://budgettracker-7v8u.onrender.com";
 
 export const API_PATHS = {
   AUTH: {
